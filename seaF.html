@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sea Freight — Connect Exim</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* HERO */
+    .hero {
+      background: url("images/Services/SeaF/container-ship.png") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1.2s ease-in-out;
+      padding-left: 180px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: slideDown 1s ease forwards;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 500px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeUp 1.5s ease forwards 0.5s;
+    }
+
+    /* MAIN CONTENT */
+    .service-detail {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 20px;
+    }
+    .service-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      color: #003366;
+    }
+    .service-intro img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: scale(0.9);
+      opacity: 0;
+      animation: zoomIn 1.2s ease forwards 0.8s;
+    }
+    .service-intro div {
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards 0.6s;
+    }
+
+    /* BENEFITS */
+    .benefits {
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards 1s;
+      text-align: center;
+    }
+    .benefits h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    .benefits ul li {
+      margin: 0.5rem 0;
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: slideRight 0.8s ease forwards;
+    }
+    .benefits ul li:nth-child(1) { animation-delay: 1.2s; }
+    .benefits ul li:nth-child(2) { animation-delay: 1.4s; }
+    .benefits ul li:nth-child(3) { animation-delay: 1.6s; }
+    .benefits ul li:nth-child(4) { animation-delay: 1.8s; }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      height: 200px;
+      transform: scale(1);
+      transition: transform 0.4s ease;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .gallery img:hover {
+      transform: scale(1.08);
+    }
+
+    /* CTA */
+    .cta-box {
+      margin: 4rem auto;
+      text-align: center;
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      animation: fadeUp 1.5s ease forwards 2s;
+    }
+    .cta-box h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .cta-box a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cta-box a:hover {
+      background: var(--secondary);
+      transform: scale(1.05);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .back-link:hover {
+      color: var(--secondary);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideRight {
+      from {opacity: 0; transform: translateX(-30px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+    @keyframes zoomIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">CE</div>
+      <div class="logo2">
+        <img src="images/logo.png" alt="Connect Exim Logo">
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Mission</a>
+      <a href="enquiry.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Sea Freight</h1>
+    <p>Efficient. Global. Trusted. Connect Exim sails your cargo across the world with reliability and care.</p>
+  </section>
+
+  <!-- Details -->
+  <main class="service-detail">
+    <div class="service-intro">
+      <div>
+        <h2>About Our Sea Freight</h2>
+        <p>
+          Our Sea Freight solutions are designed to handle bulk cargo and large shipments at the most competitive rates. 
+          With extensive global coverage and strategic shipping routes, we ensure smooth operations for your supply chain.
+        </p>
+        <p>
+          We manage full container loads (FCL), less than container loads (LCL), and project cargo. 
+          Backed by partnerships with leading shipping lines, our services guarantee reliability, transparency, and cost-efficiency.
+        </p>
+        <p>
+          With advanced tracking systems, accurate documentation, and specialized handling, we move goods seamlessly across continents.
+        </p>
+        <p>
+            We provide both Inbound and Outbound full load container cargo services.
+
+We cover almost all the ports across West, Middle-East, Far-East and Asian Subcontinent.
+
+We have a team of right people to provide timely information on departures and arrivals. Documentation is seamless with accuracy and we use best and updated software for operational work.
+        </p>
+      </div>
+      <img src="images/Services/SeaF/main.png" alt="Sea Cargo">
+    </div>
+
+    <div class="benefits">
+      <h3>Why Choose Our Sea Freight?</h3>
+      <ul>
+        <li>Competitive rates for bulk and large shipments</li>
+        <li>FCL, LCL, and project cargo management</li>
+        <li>Strong alliances with leading shipping lines</li>
+        <li>Reliable global coverage with timely updates</li>
+      </ul>
+    </div>
+
+    <div class="gallery">
+      <img src="images/Services/SeaF/main1.png" alt="Container Ship">
+      <img src="images/Services/SeaF/port.png" alt="Shipping Port">
+      <img src="images/Services/SeaF/logistics.png" alt="Logistics Operations">
+    </div>
+
+    <div class="cta-box">
+      <h3>Need to Ship Across Oceans?</h3>
+      <p>Partner with Connect Exim for secure and affordable sea freight solutions worldwide.</p>
+      <a href="enquiry.html">Request a Quote</a>
+    </div>
+
+    <a href="services.html" class="back-link">← Back to Services</a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="f-title">Connect Exim</div>
+        <div class="f-tagline">Reliable freight forwarding & trade consultancy</div>
+      </div>
+      <div>© <span id="year"></span> Connect Exim — All rights reserved</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

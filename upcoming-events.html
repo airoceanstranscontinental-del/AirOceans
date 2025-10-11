@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="images/logo-white123.png">
+<title>Upcoming Events — AirOceans</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #154476, #2a6aa8);
+    color: #333;
+    overflow-x: hidden;
+    background-color: #154476;
+  }
+
+  /* Header */
+.header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.logo {
+  height: 80px;
+  max-width: 100%; /* prevents overflow */
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  font-weight: 700;
+  font-size: large;
+  flex-wrap: wrap; /* allows nav items to wrap */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #003366;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  color: #A91E23;
+  transform: translateY(-2px);
+}
+
+.nav a.active {
+  color: #A91E23;
+  border-bottom: 2px solid #A91E23;
+  padding-bottom: 2px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .nav {
+    gap: 1rem;
+    font-size: medium;
+  }
+
+  .logo {
+    height: 60px; /* smaller logo on mobile */
+  }
+}
+
+  /* Event Section */
+  .container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 8%;
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p.subtitle {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .event-card {
+    background: linear-gradient(145deg, #ffffff, #f1f6ff, #fff1f1);
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+    border-left: 6px solid #A91E23;
+  }
+
+  .event-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .event-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-header img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #A91E23;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(169,30,35,0.2);
+  }
+
+  .event-title {
+    color: #003366;
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .event-desc {
+    color: #444;
+    font-size: 1.05rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .event-info {
+    color: #222;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    background: #f9f9ff;
+    border-radius: 8px;
+    padding: 0.8rem;
+  }
+
+  /* Speaker Section */
+  .speaker {
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #fdf3f3);
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    box-shadow: inset 0 0 8px rgba(169,30,35,0.1);
+  }
+
+  .speaker h3 {
+    color: #A91E23;
+    margin-bottom: 0.5rem;
+  }
+
+  .speaker p {
+    margin: 4px 0;
+    color: #003366;
+    font-size: 0.95rem;
+  }
+
+  /* Buttons */
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .btn {
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-register {
+    background: linear-gradient(135deg, #A91E23, #c63b40);
+    color: white;
+    box-shadow: 0 4px 10px rgba(169,30,35,0.3);
+  }
+
+  .btn-register:hover {
+    background: #7e1417;
+    transform: translateY(-2px);
+  }
+
+  .btn-calendar {
+    border: 2px solid #A91E23;
+    color: #A91E23;
+    background: white;
+  }
+
+  .btn-calendar:hover {
+    background: #fbe9e9;
+    transform: translateY(-2px);
+  }
+
+  footer {
+    background: linear-gradient(to right, #003366, #092a55);
+    color: #fff;
+    padding: 1rem 8%;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+  }
+
+  @media (max-width: 768px) {
+    .event-header {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Connect Exim Logo" class="logo">
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Mission</a>
+      <a href="upcoming-events.html" class="active">Upcoming Events</a>
+      <a href="enquiry.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <!-- Events Section -->
+  <div class="container">
+    <h1>Upcoming Events</h1>
+    <p class="subtitle">Join us in exploring new horizons and building sustainable connections worldwide — free of cost.</p>
+
+    <div class="event-card">
+      <div class="event-header">
+        <img src="https://i.imgur.com/3GvwNBf.jpg" alt="Dr. Ananya Mehta">
+        <div>
+          <h2 class="event-title">Sustainability & Innovation Summit</h2>
+          <p class="event-desc">A forward-looking event exploring how technology and sustainable practices can merge to shape a greener tomorrow.</p>
+          <div class="event-info">
+            📅 <strong>October 25, 2025</strong> &nbsp; | &nbsp; ⏰ 10:00 AM - 1:00 PM <br>
+            📍 Symbiosis Auditorium, Pune
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker">
+        <h3>Speaker</h3>
+        <p><strong>Dr. Ananya Mehta</strong></p>
+        <p>Professor of Environmental Engineering, IIT Bombay</p>
+        <p>Dr. Mehta is a renowned environmentalist with over 15 years of research experience in green technologies, waste management, and sustainable infrastructure.</p>
+      </div>
+
+      <div class="btn-container">
+        <a href="https://forms.gle/gmD9WqSY46mgnv3x5" target="_blank" class="btn btn-register">Register Now</a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sustainability+%26+Innovation+Summit&dates=20251025T100000/20251025T130000&details=Join+us+for+a+discussion+on+sustainability+and+innovation.&location=Symbiosis+Auditorium,+Pune" target="_blank" class="btn btn-calendar">Add to Calendar</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> AirOceans TransContinental PVT LTD — All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll animation
+    const cards = document.querySelectorAll('.event-card');
+
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight - 100;
+    }
+
+    function scrollAnimation() {
+      cards.forEach(card => {
+        if (isInViewport(card)) {
+          card.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', scrollAnimation);
+    window.addEventListener('load', scrollAnimation);
+  </script>
+
+</body>
+</html>

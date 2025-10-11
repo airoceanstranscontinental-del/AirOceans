@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo-white123.png">
+  <title>Our Journey — AirOceans</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f9ff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.2rem 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* not sticky */
+}
+
+.logo {
+  height: 45px;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #003366;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #A91E23;
+}
+
+.nav a.active {
+  color: #A91E23;
+  border-bottom: 2px solid #A91E23;
+  padding-bottom: 2px;
+}
+
+/* ===== Timeline ===== */
+.timeline-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 8%;
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: #A91E23;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  padding: 1.5rem 2rem;
+  position: relative;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #A91E23;
+  border-radius: 50%;
+  top: 1.5rem;
+  right: -9px;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -9px;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: inline-block;
+  max-width: 90%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #A91E23;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Button ===== */
+.journey-button {
+  display: block;
+  margin: 2rem auto 4rem auto;
+  background: #A91E23;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.journey-button:hover {
+  background: #7e171a;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #003366;
+  color: #fff;
+  padding: 1rem 8%;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem 6%;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem 1.5rem 1.2rem 3rem;
+    left: 0 !important;
+  }
+
+  .timeline-item::after {
+    left: 10px;
+    right: auto;
+  }
+
+  .timeline-content {
+    max-width: 100%;
+  }
+
+  .journey-button {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+
+  .timeline-container {
+    padding: 0 5%;
+  }
+
+  .timeline-content {
+    padding: 0.8rem 1rem;
+  }
+
+  .journey-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Connect Exim Logo" class="logo">
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Mission</a>
+      <a href="upcoming-events.html">Upcoming Events</a>
+      <a href="enquiry.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <!-- Our Journey -->
+  <section class="timeline-container">
+    <!-- Latest first -->
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">September 2025</div><p>Executed export of 50 SOC containers to Mauritius with full cargo clearance.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">September 2025</div><p>Provided consultancy for EPCG license and import duty saving on capital goods.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">August 2025</div><p>Redesigned palletizing system to increase capacity to 17 tons per container.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">May 2025</div><p>Started FMC rate filing and HBL issuance for USA exports using own SCAC code.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">March 2025</div><p>Registered as FMC Forwarder enabling AMS and ISF filing directly.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">August 2024</div><p>Started Mumbai office operations.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">April 2024</div><p>Delivered 2nd-day hand-carry shipment from Pune to Shanghai successfully.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">February 2024</div><p>Opened Bengaluru office and completed console filing registration.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">December 2023</div><p>Introduced FTWZ for import duty savings as a High Seas alternative.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">September 2023</div><p>Provided vacuum packaging & rust-free storage for metro drill bearings.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">July 2023</div><p>Imported 90 tons (full aircraft) of DG Engine cargo from Frankfurt to Mumbai.</p></div></div>
+    <div class="timeline-item"><div class="timeline-content"><div class="timeline-date">June 2023</div><p>Started weekly 2 consoles from Frankfurt to Mumbai.</p></div></div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> AirOceans Transcontinental Pvt. Ltd. — All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const items = document.querySelectorAll('.timeline-item');
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight - 100;
+    }
+    function scrollAnimation() {
+      items.forEach(item => {
+        if (isInViewport(item)) item.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll', scrollAnimation);
+    window.addEventListener('load', scrollAnimation);
+  </script>
+
+</body>
+</html>
