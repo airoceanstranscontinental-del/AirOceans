@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" href="images/logo-white123.png">
+  <title>Mission — AirOceans Transcontinental</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="main-header">
+    <div class="brand">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="AirOceans Logo" width="160" height="62" loading="eager"></a>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="mission.html" class="active">Mission</a>
+      <a href="upcoming-events.html">Events</a>
+      <a href="enquiry.html" class="nav-enquiry">Get a Quote</a>
+    </nav>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="about-hero" style="padding:4rem 5%;">
+    <p class="label-tag" style="display:block;margin-bottom:0.6rem;">Our Purpose</p>
+    <h1>Mission, Vision &amp; Values</h1>
+    <p>The principles that guide every shipment, every relationship, and every decision we make.</p>
+  </section>
+
+  <!-- MISSION CONTENT -->
+  <main class="mission-main">
+    <section class="mission-about fade-up">
+      <p class="label-tag" style="display:block;text-align:center;margin-bottom:0.5rem;">About The Company</p>
+      <h2>About Company</h2>
+      <p>We are an international Freight Forwarding company having expertise in the movement of critical and time-bound cargo across the globe. We streamline international logistics for our clients and network partners to save their current spends on logistics and to enable them to focus on their core business.</p>
+      <p>We understand the need of our clients and provide them tailored solutions. While cargo movement is our core responsibility, we ensure national as well as international compliance to avoid present and future litigations. We help our clients with consultancy services on government incentives, product packaging, and numerous trade and logistics related certifications.</p>
+      <p>Our commitment is continuous improvement in our process and operations to help our clients and network partners achieve sustainable growth.</p>
+
+      <div class="about-content">
+        <div class="about-image">
+          <img src="images/elephant.jpeg" alt="AirOceans Philosophy" loading="lazy">
+        </div>
+
+        <div class="mvv-box">
+          <div class="mvv-item">
+            <div class="icon">🚢</div>
+            <strong>Our Mission</strong>
+            <p>To be recognised consistently as the most versatile Shipping &amp; Logistic Company, while offering services exceeding expectations &amp; developing credibility with all stakeholders to their best satisfaction.</p>
+          </div>
+          <div class="mvv-item">
+            <div class="icon">🌍</div>
+            <strong>Our Vision</strong>
+            <p>We don't aim to look Good, we consistently aspire to become Good — setting new benchmarks with every consignment and every client relationship.</p>
+          </div>
+          <div class="mvv-item">
+            <div class="icon">🤝</div>
+            <strong>Our Values</strong>
+            <p>We believe in relativity and respect for numerous opinions while embracing collaboration, integrity, and continual growth across all our operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>AirOceans Transcontinental</h4>
+        <p>Reliable freight forwarding &amp; trade consultancy across 50+ countries.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Address</h4>
+        <p>4th Floor, B-wing, Heritage House 6, Ramabai Ambedkar Road, Pune 411001, India</p>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p><a href="mailto:pricing.pune@air-oceans.com">pricing.pune@air-oceans.com</a></p>
+        <p><a href="tel:02048624749">020 48624749</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> AirOceans Transcontinental Pvt. Ltd. — All rights reserved</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('main-nav').classList.toggle('open');
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" href="images/logo-white123.png">
+  <title>Services — AirOceans Transcontinental</title>
+  <meta name="description" content="Explore AirOceans' full range of logistics services: air freight, sea freight, customs clearance, duty exemption, packaging, and door-to-door delivery.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="main-header">
+    <div class="brand">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="AirOceans Logo" width="160" height="62" loading="eager"></a>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Mission</a>
+      <a href="upcoming-events.html">Events</a>
+      <a href="enquiry.html" class="nav-enquiry">Get a Quote</a>
+    </nav>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="about-hero" style="padding:4rem 5%;">
+    <p class="label-tag" style="display:block;margin-bottom:0.6rem;">What We Offer</p>
+    <h1>Our Services</h1>
+    <p>End-to-end logistics and trade solutions designed to simplify international business for our clients.</p>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <main>
+    <section class="services" style="background:var(--white);">
+      <div class="service-grid">
+        <a href="airF.html" class="service-card fade-up stagger-child">
+          <img src="images/Services/AF!.png" alt="Air Freight" class="service-icon" loading="lazy">
+          <div class="service-card-body">
+            <h3>Air Freight</h3>
+            <p>Fast and reliable air freight solutions for urgent shipments across the globe, with complete tracking and documentation support. We cover 350+ destinations worldwide.</p>
+            <span class="service-card-link">Explore Air Freight →</span>
+          </div>
+        </a>
+        <a href="seaF.html" class="service-card fade-up stagger-child">
+          <img src="images/Services/SF1.png" alt="Sea Freight" class="service-icon" loading="lazy">
+          <div class="service-card-body">
+            <h3>Sea Freight</h3>
+            <p>Cost-effective ocean freight forwarding with full container load (FCL) and less-than-container load (LCL) options, covering all major global ports.</p>
+            <span class="service-card-link">Explore Sea Freight →</span>
+          </div>
+        </a>
+        <div class="service-card fade-up stagger-child">
+          <img src="images/Services/CC1.png" alt="Customs Clearance" class="service-icon" loading="lazy">
+          <div class="service-card-body">
+            <h3>Customs Clearance</h3>
+            <p>Expert guidance on Indian customs regulations, ensuring smooth clearance and minimal delays at ports and airports. AMS, ISF, and HBL filing support.</p>
+          </div>
+        </div>
+        <div class="service-card fade-up stagger-child">
+          <img src="images/Services/DE1.png" alt="Duty Exemption" class="service-icon" loading="lazy">
+          <div class="service-card-body">
+            <h3>Duty Exemption Consulting</h3>
+            <p>Specialized consulting to help you benefit from government duty exemption schemes such as EPCG, FTWZ, Advance Authorisation, and Duty Drawback to reduce costs.</p>
+          </div>
+        </div>
+        <div class="service-card fade-up stagger-child">
+          <img src="images/Services/PS1.png" alt="Packaging Solutions" class="service-icon" loading="lazy">
+          <div class="service-card-body">
+            <h3>Packaging Solutions</h3>
+            <p>Export-quality packaging including vacuum packaging, rust-free storage, and palletizing systems designed to maximize cargo safety and container capacity.</p>
+          </div>
+        </div>
+        <div class="service-card fade-up stagger-child">
+          <img src="images/Services/DD1.png" alt="Door-to-Door Delivery" class="service-icon" loading="lazy">
+          <div class="service-card-body">
+            <h3>Door-to-Door Delivery</h3>
+            <p>Complete logistics solutions from pickup to final delivery. We manage every step including documentation, customs, and last-mile delivery for a truly seamless experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Need a Custom Logistics Solution?</h2>
+      <p>Our team of experts is ready to create a tailored freight strategy for your business.</p>
+      <button><a href="enquiry.html">Request a Quote</a></button>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>AirOceans Transcontinental</h4>
+        <p>Reliable freight forwarding &amp; trade consultancy across 50+ countries.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Address</h4>
+        <p>4th Floor, B-wing, Heritage House 6, Ramabai Ambedkar Road, Pune 411001, India</p>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p><a href="mailto:pricing.pune@air-oceans.com">pricing.pune@air-oceans.com</a></p>
+        <p><a href="tel:02048624749">020 48624749</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> AirOceans Transcontinental Pvt. Ltd. — All rights reserved</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('main-nav').classList.toggle('open');
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

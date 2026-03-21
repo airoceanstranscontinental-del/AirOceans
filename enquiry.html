@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" href="images/logo-white123.png">
+  <title>Get a Quote — AirOceans Transcontinental</title>
+  <meta name="description" content="Request a competitive freight quote from AirOceans Transcontinental. Air, sea, customs, and more.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="main-header">
+    <div class="brand">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="AirOceans Logo" width="160" height="62" loading="eager"></a>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Mission</a>
+      <a href="upcoming-events.html">Events</a>
+      <a href="enquiry.html" class="nav-enquiry active">Get a Quote</a>
+    </nav>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="about-hero" style="padding:3.5rem 5% 3rem;">
+    <p class="label-tag" style="display:block;margin-bottom:0.6rem;">Competitive Pricing</p>
+    <h1>Request a Quote</h1>
+    <p>Fill in the details below and our team will respond within 24 hours with a competitive quote.</p>
+  </section>
+
+  <main class="main-grid" style="margin-top:2.5rem;margin-bottom:3rem;">
+    <!-- FORM -->
+    <section class="form-card fade-up">
+      <h2>Get a Quote</h2>
+      <p class="form-subtitle">Fill the form to receive an accurate and competitive quote tailored to your shipment.</p>
+
+      <form action="https://formspree.io/f/mkgqzwpo" method="POST" class="form">
+        <input type="hidden" name="_cc" value="pricing.pune@connectexim.com,pricing.pune@air-oceans.com">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="companyName">Company Name *</label>
+            <input type="text" id="companyName" name="Company Name" required placeholder="Your company name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="First Name" required placeholder="First name">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="Last Name" required placeholder="Last name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Email" required placeholder="you@company.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="Phone" required placeholder="+91 9XXXXXXXXX">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="commodity">Commodity</label>
+            <input type="text" id="commodity" name="Commodity" placeholder="Goods / commodity type">
+          </div>
+          <div class="form-group">
+            <label for="hsn">HSN Code</label>
+            <input type="text" id="hsn" name="HSN Code" placeholder="e.g. 8471">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tradeType">Import or Export *</label>
+            <select id="tradeType" name="Trade Type" required>
+              <option value="">Select direction</option>
+              <option>Import</option>
+              <option>Export</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mode">Mode of Transport</label>
+            <select id="mode" name="Mode of Transport">
+              <option value="">Select mode</option>
+              <option>Air</option>
+              <option>Sea</option>
+              <option>Road</option>
+              <option>Rail</option>
+              <option>Multimodal</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="incoterm">Incoterm</label>
+            <select id="incoterm" name="Incoterm">
+              <option value="">Select incoterm</option>
+              <option>FOB</option><option>CIF</option><option>EXW</option><option>DAP</option>
+              <option>FCA</option><option>DDP</option><option>DDU</option><option>CFR</option>
+              <option>CPT</option><option>CIP</option><option>FAS</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="shipments">Number of Shipments</label>
+            <input type="number" id="shipments" name="Shipments" placeholder="Estimated quantity">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="loadingPort">Port of Loading</label>
+            <input type="text" id="loadingPort" name="Port of Loading" placeholder="e.g. Mumbai, JNPT">
+          </div>
+          <div class="form-group">
+            <label for="deliveryPort">Port of Delivery</label>
+            <input type="text" id="deliveryPort" name="Port of Delivery" placeholder="e.g. Shanghai, LAX">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pickupAddress">Pickup Address</label>
+            <textarea id="pickupAddress" name="Pickup Address" placeholder="Full pickup address"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="deliveryAddress">Delivery Address</label>
+            <textarea id="deliveryAddress" name="Delivery Address" placeholder="Full delivery address"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="validity">Quote Validity (days)</label>
+            <input type="number" id="validity" name="Validity" placeholder="e.g. 15">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="remarks">Cargo Description &amp; Container Requirements</label>
+            <textarea id="remarks" name="Remarks" style="min-height:110px;" placeholder="Describe your cargo, dimensions, special handling needs, number and type of containers required..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Send Enquiry →</button>
+      </form>
+    </section>
+
+    <!-- CONTACT SIDEBAR -->
+    <aside class="contact-card fade-up">
+      <h3>Contact &amp; Location</h3>
+
+      <div>
+        <span class="contact-label">Email — Pricing</span>
+        <a href="mailto:pricing.pune@air-oceans.com">pricing.pune@air-oceans.com</a>
+      </div>
+      <div>
+        <span class="contact-label">Phone</span>
+        <a href="tel:02048624749">020 48624749</a>
+      </div>
+      <div>
+        <span class="contact-label">Office Address</span>
+        <p>4th Floor, B-wing, Heritage House 6, Ramabai Ambedkar Road, Pune 411001, India</p>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;margin-top:0.5rem;">
+        <span class="contact-label">Directors</span>
+        <p style="margin-top:0.4rem;"><a href="mailto:sunit.yadav@air-oceans.com">sunit.yadav@air-oceans.com</a></p>
+        <p><a href="mailto:vaibhav.godha@air-oceans.com">vaibhav.godha@air-oceans.com</a></p>
+        <p><a href="mailto:atul.gurav@air-oceans.com">atul.gurav@air-oceans.com</a></p>
+      </div>
+
+      <div style="background:rgba(200,168,75,0.12);border-radius:10px;padding:1rem;margin-top:0.5rem;border:1px solid rgba(200,168,75,0.25);">
+        <p style="color:var(--gold2);font-size:0.85rem;font-weight:600;">⚡ Quick Response</p>
+        <p style="font-size:0.83rem;margin-top:0.3rem;">Our pricing team typically responds within 24 business hours with a competitive quote.</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>AirOceans Transcontinental</h4>
+        <p>Reliable freight forwarding &amp; trade consultancy across 50+ countries.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Address</h4>
+        <p>4th Floor, B-wing, Heritage House 6, Ramabai Ambedkar Road, Pune 411001, India</p>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p><a href="mailto:pricing.pune@air-oceans.com">pricing.pune@air-oceans.com</a></p>
+        <p><a href="tel:02048624749">020 48624749</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> AirOceans Transcontinental Pvt. Ltd. — All rights reserved</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('main-nav').classList.toggle('open');
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
